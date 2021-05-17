@@ -1,3 +1,24 @@
+% include the knowledge base
+:- ['load.pro'].
+
+% 3.1 glanian_distance(Name1, Name2, Distance) 5 points
+
+% 3.2 weighted_glanian_distance(Name1, Name2, Distance) 10 points
+
+% 3.3 find_possible_cities(Name, CityList) 5 points
+
+% 3.4 merge_possible_cities(Name1, Name2, MergedCities) 5 points
+
+% 3.5 find_mutual_activities(Name1, Name2, MutualActivities) 5 points
+
+% 3.6 find_possible_targets(Name, Distances, TargetList) 10 points
+
+% 3.7 find_weighted_targets(Name, Distances, TargetList) 15 points
+
+% 3.8 find_my_best_target(Name, Distances, Activities, Cities, Targets) 20 points
+
+% 3.9 find_my_best_match(Name, Distances, Activities, Cities, Targets) 25 points
+
  human(john).
  human(jack).
  human(alice).
@@ -23,52 +44,27 @@ multiply_two([Head|Tail], Result) :-
 	TempHead is Head*2,
 	Result = [TempHead| TailResult].
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 concatenate([],List,List).
 concatenate([H1|T1], List2, Result) :-
 
 	concatenate(T1, List2, TailResult),
 	Result = [H1| TailResult].
-
-
-
-
-
-
-
-
-glanian(zhuirlu, q, [0.594, 0.827, 0.904, 0.962, 0.604, 0.218, 0.321, 0.733, 0.630, 0.057]).
-glanian(josizar, g, [0.936, 0.425, 0.550, 0.613, 0.063, 0.334, 0.834, 0.242, 0.970, 0.172]).
-glanian(olisor, q, [0.310, 0.043, 0.949, 0.722, 0.239, 0.909, 0.182, 0.635, 0.377, 0.639]).
-glanian(calemi, g, [0.306, 0.507, 0.038, 0.075, 0.597, 0.479, 0.900, 0.289, 0.945, 0.331]).
-
-
-expects(zhuirlu, [m, b, f], [0.945, -1, 0.186, 0.151, -1, -1, 0.483, 0.343, 0.351, 0.960]).
-expects(josizar, [f, b, a], [0.213, 0.590, 0.599, -1, 0.040, -1, 0.678, 0.492, -1, 0.058]).
-expects(olisor, [a], [-1, 0.657, -1, 0.990, 0.838, 0.295, -1, 0.075, 0.626, -1]).
-expects(calemi, [q, f], [0.291, -1, 0.003, 0.351, -1, 0.516, 0.456, 0.019, 0.305, 0.445]).
-
-
-weight(zhuirlu, [0.849, -1, 0.199, 0.280, -1, -1, 0.597, 0.125, 0.742, 0.242]).
-weight(josizar, [0.332, 0.746, 0.203, -1, 0.115, -1, 0.106, 0.524, -1, 0.390]).
-weight(olisor, [-1, 0.528, -1, 0.143, 0.272, 0.084, -1, 0.069, 0.125, -1]).
-weight(calemi, [0.459, -1, 0.855, 0.258, -1, 0.288, 0.900, 0.093, 0.602, 0.510]).
-
-
-likes(zhuirlu, [], [beyroot, istenbol]).
-likes(josizar, [crafting, camping, swimming], [seviliri, viyan]).
-likes(zhuirzaz, [camping, swimming, puppet_show, concert], [maimaician, san_wm, seviliri]).
-
-
-city(venis, [zhuirlu, thinnest, shiryva, peregrey, celerot, zynthmys, ramgan, eligel, greei, bloshas, sudemi, emijosi, ausly, slycha, flammvae, peregnarv, faezab, logfros, drtist, eldvy, haesols, ponnal, sudjin, igninau, blosshee, chembell, dorsangu, mystbri, séveshir, torij, abigsapp, aurstar, aldig, shirlog, anthignin, midnbrilb, tureng, skelingi, cluang, darcaky, lurey, ilyrei, ylynzor, avel, daermort, hunnight, ophebra, yvapro, galste, lymshun, liduvr, zhuiron, elocira, livik, cryssnowf, josimire, nysyva, salves, pondfa, skelsop, bellsant, jaylfun, daeakym, rotnor, vayfin, auto, silverstar_, lipster, malblis, ganblis, vinefae, tistonn, aqualava, sudchem, ailséve, edmsir, zarsly, vaelof, fabtwil, vaybra, rainaus, dartist, sopgre, mistmist, foxfgay, oliusun, morthor, star_yrli, lisebas, kilel, syftaz, lunanor, evejayl, soldnal, calpond, ailrag, thrdar, haezhuir, edmdig, solshas, ciselo, aqrihad, missari, bliscira, ophefros, usno, vinezapp, stervik, diggol, solsnight, jodmal, tismal, drsols, usvir, ytanaid, usunlai, brilbeng, iogtwil, mortbon, erosab, elwmidn, thinbal, coagan, lulai, rijla, kalsale, dynaang, darcatist, eiliingi, ailtae, lucama, dezanys, tissilver, tallava, oraqri, brato, caebon, remingi, earthste, owthr, darfros, zorgal, gredrache, opheyrli, vixfab, funhun, wistzapp, renoddfi, briayld, evevay, ragkym, aulay, freyag, balgan, wittwil, twiledm, snowfmi, diamor, igningan, stersangu, malon, nightdiml, maloli, aidhae, josiama, zazvy, gozaz, brikus, haefros, nightnight, amataz, quinkys, talyag, elwyns, sirtae, alestar, rainsly, mortchem, twinmys, ranolw, daemster, reysor, sorpereg, aidzynth, jadechand, sabale, akkserpr, belldor, stechand, abigau, mortfun, kusfab, ezgal, angjade, santrem, aidvog, dagcis, kalsbel, bragel, jhapereg, daermine, amazhuir, vestal, dimlazu, turvfre, stepereg, sheejade, jewgus, sapmerl, fabast, shisangu, sorsyf, ilyrluna, sunstis, mystang, fabang, kalsero, anthglac, wistism, saetis, amerdyna, zhuirzak, pearlylyn, sudséve, soldeve, phydeza, klayem, santquam, ismalexa, scarero, brali, joddarca, gold_shad, lipwyns, slyzin, gaeemi, ertignin, gyllvae, emigolden, oliignin, ismla, bonesnanth, sévevae, olikals, yagcele, ophenal, norfre, dorfar, vesso, fresnowf, flammeld, dermeelo, brijayl, diamang, sorazr, malnight, yagazar, jodeve, mystgan, ilbshad, dracderme, cryscae, serprnarv, ismklay, alexafin, sozapp, belschand, oddfiyofune, jasdaer, zarkil, uldrgay, dermesab, ytandag, emragr, myrblis, phyrij, ponddaea, digelo, floig, kusdag, nalran, igusun, starduvr, aylddor, aurilyr, brilbkez, phytist, ragrren, eleccira, myrama, bonnbrilb, turveve, narvragr, kyanth, nelmalu, caelay, aqriny, kolzwil, erono, amacha, crysjayl, balmyst, bonesnsols, aylddiml, ninrain, snowfnel, blosblis, saeau, horyrli, shirjew, lucnys, froselo, olikus, azublis, azrpro, onfae, esmertwin, zhuirzapp, aumyst, anytan, haseste, gyllytan], [judo, pet, photo, crafting, card_game]).
-city(corse_town, [josizar, draccor, evedaem, emjai-b, ylynpon, axelw, starnel, mirewilk, aurbel, prodar, quamlu, ameklay, sariazar, elecpha, alnest, akibzar, orkalo, jharain, nymidn, astdarca, nightpind, malyr, nestgemb, klaymaje, hunvir, twinow, zappstarb, eldophe, sabhep, shircira, lybre, zhuirpereg, gylltal, brilbjha, lymsaus, sybeserpr, ansyf, bonbonn, zarsapp, tanuazu, orifae, evesnowf, ranste, sirgold_, azaraus, thrbel, vixazu, mirem, dezasari, tendli, amerlog, ontiz, reyyag, avdrac, vogfae, vinetwin, malsor, ismvix, saeemi, frepon, shirdor, chemdark_, jingus, amerey, wynsdr, myraus, tizgel, hadelec, esteazu, nordr, ilbsant, wistemi, samaus, calbre, witmerl, vayytan, doreth, asrawist, bellhas, snowfblos, caemyst, earthyofune, sudduvr, tazluc, zazsul, shilavi, fabhas, pyrelo, haeluna, wispmsal, gyllon, nightsud, sakafoxf, yvaau, sebasaqri, norjas, talsud, zareth, anthsuns, bulcha, kalstha, mortdaer, sulquam, wistlyms, eldvine, zisaka, wisshi, brovae, sammaje, celetist, rainylyn, jadedeve, ragrayld, astlu, ilyrbrilb, azumort, solsmire, scarlai, lipsebas, reydag, ailsal, ziren, dracheky, glacquin, gold_gold_, sheecal, rortae, vaetist, gelvix, aqrivae, tovas, quinbra, zencha, zappsud, akkor, cosdaem, zappgyll, starbzab, zhuirnest, gomal, wilwilk, minesyf, myrtis, alexali, sybeny, yvanight, anaqua, jadeazu, fabglac, vinegae, noragr, igninwyns, haesop, vaemort, zaklay, pearlkus, ludarca, ethluc, alexaal, zynthkil, laili, phatal, asramal, myrmort, sévegay, jai-bsud, kysdrache, onayld, orifun, aquacae, abigbon, cislai, zigae, bonit, nestbel, gusshi, rhenaau, esmermys, darcaakib, onsols, branemre, libul, eiligolden, dracelw, solsclu, ayldwil, bricrys, nypro, zarrot, onnsols, kusclu, bonnsap, wilksapp, vasazr, silfre, bracoa, vaejew, sanguster, celenest, pindjod, pyreste, syfkys, lucytan, thanarv, ingisil, jhaso, lieste, azuig, azuzhuir, zabzar, nightnarv, dermesud, eldrus, tizsam, zingyll, vinesold, darcayr, lavaayld, chembre, bonfae, turhae, bulcele, nybels, balcae, alemerl, nalilb, avbel, dagasra, jhajosi, sameld, akkzar, tizbels, gocae, daryva, milkyhun, merlgolden, tendsols, sopblis, duvresmer, amerkalo, golno, ethero, lofpro, kalsgolden, dardor, angmal, amerfin, sybejai-b, braluc, zenyr, jaszor, golayld, foxfrij, kezzi, vikfar, sopei, soldau, daerfros, goldenlof, soldto, startend, blisluna, vineilb, thalu, star_night, nyzin, majeli, ganvine, sopem, lavivy, zynthzar, frecira, emanth, abigfun, quamhep, horazar, gallthin, astpearl, zhuirtis, vyfun, bonnpon, ertvine, azulu, zakang, brabonn, kysmidn, eleceth, pondignin, bridaea, goves, chasybe, noaur, clulu, sopjai-b, haedor, shirvae, alsab, iogwil, ezmal, kalsrain, drusklay, dynasir, mysail, nightbre, gyllophe, orsop, azugre, astgall, elwakib, oriderme, igningall, drachemal, jasfae, midname, itpro, digvae, akibilb, tendeili, sakaig, skelan, eldesmer, digdar, sophas, vesny, hadnys, kolzvae, dorglac, bliszi, kyhas, ylyntha, elsil, skeldor, rotingi, haekals, lucpyr, tazignin, dagedm, stargan, lueth, oristar_, asratha, amamalu, darcaal, brorot, brucele, laviazu, lymsilb, luvy, dignin, ayldves, yrlikys, drachevik, zorvay, dermeakib, bonesnoli, amamort], [walking, tennis, swimming, bird_watching, puppet_show, circus, board_gaming]).
-
-
-
-
-
-
-
-
 
 
 
@@ -93,6 +89,8 @@ weighted_sum(ExpectedFeatures, GlanianFeatures, WeightList, Result) :-
 	).
 
 
+
+
 sum([],[], 0).
 sum(ExpectedFeatures, GlanianFeatures, Result) :-
 	
@@ -110,12 +108,16 @@ sum(ExpectedFeatures, GlanianFeatures, Result) :-
 	).
 	
 
+
+
 glanian_distance(Name1, Name2, Distance) :-
 	
 	expects(Name1, ExpectedGenders, ExpectedFeatures),
 	glanian(Name2,GlanianGender, GlanianFeatures),
 	sum(ExpectedFeatures,GlanianFeatures,Result),!,
 	Distance is sqrt(Result).
+
+
 
 
 weighted_glanian_distance(Name1, Name2, Distance) :-
@@ -127,15 +129,18 @@ weighted_glanian_distance(Name1, Name2, Distance) :-
 	Distance is sqrt(Result).
 
 
+
+
 find_possible_cities(Name, CityList) :-
 	
-	city(CityName, HabitantList, ActivityList),
-	    
+	city(CityName, HabitantList, ActivityList),  
 	    (member(Name, HabitantList)
 	->  findall(CityName, member(Name, HabitantList) , CurrentCity)
 	),
 	likes(Name, LikedActivities, LikedCities),
 	append( CurrentCity, LikedCities, CityList).
+
+
 
 
 merge_possible_cities(Name1, Name2, CityList) :-
@@ -148,6 +153,8 @@ merge_possible_cities(Name1, Name2, CityList) :-
     ).
 
 
+
+
 find_mutual_activities(Name1, Name2, ActivityList) :-
 	
 	likes(Name1, LikedActivities1, LikedCities1),
@@ -155,17 +162,158 @@ find_mutual_activities(Name1, Name2, ActivityList) :-
 	findall(Activity, (member(Activity, LikedActivities1), member(Activity, LikedActivities2)), ActivityList).
 	
 
-find_possible_targets(Name, Distances, TargetList ) :-
 
+
+list_converter([], [],[]).
+list_converter([H|T], Distances, TargetList) :-
+	
+	list_converter(T, TDistances, TTargetList),
+	[First|Second]=H,
+	Distances=[Second|TDistances],
+	TargetList=[First| TTargetList].
+
+
+
+
+find_possible_targets(Name, Distances, TargetList ) :-
+	
+	expects(Name, ExpectedGenders, ExpectedFeatures),!,
+	findall([Name2|Distance2],(glanian(Name2, GlanianGender, GlanianFeatures),glanian_distance(Name,Name2,Distance2), member(GlanianGender, ExpectedGenders)), TempList),
+	sort(2,  @=<, TempList, SortedTempList),
+	list_converter(SortedTempList, Distances, TargetList).
+
+
+
+
+find_weighted_targets(Name, Distances, TargetList) :- 
+	
+	expects(Name, ExpectedGenders, ExpectedFeatures),!,
+	findall([Name2|Distance2],(glanian(Name2, GlanianGender, GlanianFeatures),weighted_glanian_distance(Name,Name2,Distance2), member(GlanianGender, ExpectedGenders)), TempList),
+	sort(2,  @=<, TempList, SortedTempList),
+	list_converter(SortedTempList, Distances, TargetList).
+
+
+
+
+bool_are_liked_activities_in_target_city([FirstLiked|TailLiked], CurrentCity, Name2) :-
+	
+	city(CurrentCity, HabitantList, ActivityList),
+	dislikes(Name2, DislikedActivities, DislikedCities, Limits),!,
+	bool_are_liked_activities_in_target_city(TailLiked, CurrentCity,Name2),
+	member(FirstLiked, ActivityList),
+	\+ member(FirstLiked, DislikedActivities).
 	
 
 
 
+intersection_counter([],NameTarget, 0).
+intersection_counter([FirstDisliked|TailDisliked], LikedActivities, Count) :-
+
+		intersection_counter(TailDisliked, LikedActivities, CountTail),
+			(member(FirstDisliked, LikedActivities)
+		-> 	Count is CountTail+1
+		;	Count is CountTail
+		).	
 
 
 
 
+bool_in_tolerance_limits( [], [],1).
+bool_in_tolerance_limits( [FirstList|TailList], [FirstFeature|TailFeature],R) :-
 
+		(FirstList=[]
+	->  bool_in_tolerance_limits( TailList, TailFeature,RT),
+		R is 1
+	;   [FirstFirst| SecondFirstt] = FirstList,
+		[SecondFirst|T]= SecondFirstt,
+		((FirstFeature<SecondFirst), (FirstFeature>FirstFirst)),
+		bool_in_tolerance_limits( TailList, TailFeature,RT),
+		R is 1
+	).
+
+
+
+
+test(Name, Name2, Count) :-
+	
+	dislikes(Name2, DislikedActivities, DislikedCities, Limits),
+	likes(Name, LikedActivities, LikedCities),				
+
+	intersection_counter(DislikedActivities, LikedActivities, Count).
+
+
+	
+	
+find_my_best_target(Name, Distances, ActivityList, CityList, TargetList) :-
+
+	findall( [Distance,Activity,CityName,Name2], 
+	(glanian(Name2, GlanianGender, GlanianFeatures),
+	city(CityName, HabitantList, ActivityList),
+	expects(Name, ExpectedGenders, ExpectedFeatures),
+	likes(Name, LikedActivities, LikedCities),				
+	dislikes(Name, DislikedActivities, DislikedCities, Limits),	
+
+	\+ old_relation([Name, Name2]),
+	member(GlanianGender, ExpectedGenders),	
+
+	bool_in_tolerance_limits( Limits, GlanianFeatures ,R),
+	intersection_counter( DislikedActivities, LikedActivities, Count), Count<3,
+
+	\+ member(CityName, DislikedCities),
+	merge_possible_cities(Name, Name2, MergedCities),
+	member(CityName, MergedCities),
+	member(Activity, ActivityList),
+	\+ member(Activity, DislikedActivities),
+
+	((find_possible_cities(Name, PossibleCities), member(CityName, PossibleCities) ); member(Activity, LikedActivities)),
+
+	weighted_glanian_distance(Name, Name2, Distance)
+	),
+	TempList),
+	sort(TempList, TargetList).
+
+
+
+
+find_my_best_match(Name, Distances, ActivityList, CityList, TargetList) :-
+
+	findall( [Distance,Activity,CityName,Name2], 
+	(glanian(Name, GlanianGender, GlanianFeatures),
+	glanian(Name2, GlanianGender2, GlanianFeatures2),
+	city(CityName, HabitantList, ActivityList),
+	expects(Name, ExpectedGenders, ExpectedFeatures),
+	expects(Name2, ExpectedGenders2, ExpectedFeatures2),
+	likes(Name, LikedActivities, LikedCities),
+	likes(Name2, LikedActivities2, LikedCities2),							
+	dislikes(Name, DislikedActivities, DislikedCities, Limits),	
+	dislikes(Name2, DislikedActivities2, DislikedCities2, Limits2),	
+
+	\+ old_relation([Name, Name2]),
+	member(GlanianGender, ExpectedGenders2),member(GlanianGender2, ExpectedGenders),
+
+	bool_in_tolerance_limits( Limits, GlanianFeatures2,R), bool_in_tolerance_limits( Limits2, GlanianFeatures,R2),
+	(intersection_counter( DislikedActivities, LikedActivities2, Count), Count<3), (intersection_counter( DislikedActivities2, LikedActivities, Count2), Count2<3), 
+
+	\+ member(CityName, DislikedCities), \+ member(CityName, DislikedCities2),
+
+	merge_possible_cities(Name, Name2, MergedCities),
+	member(CityName, MergedCities),
+	member(Activity, ActivityList),
+	\+ member(Activity, DislikedActivities), \+ member( Activity, DislikedActivities2),
+
+	((find_possible_cities(Name, PossibleCities), member(CityName, PossibleCities) ); member(Activity, LikedActivities)),
+	((find_possible_cities(Name2, PossibleCities2), member(CityName, PossibleCities2) ); member(Activity, LikedActivities2)),
+
+
+	weighted_glanian_distance(Name, Name2, Distance1), weighted_glanian_distance(Name2, Name, Distance2), 
+	Distance is (Distance1+Distance2)/2
+	),
+	TempList),
+	sort(TempList, TargetList).
+
+
+
+	
 
 
 
